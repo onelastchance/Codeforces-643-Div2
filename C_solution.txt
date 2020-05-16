@@ -1,0 +1,12 @@
+#include<bits/stdc++.h>
+#define int long long
+using namespace std;
+int main()
+{
+	int a,b,c,d;
+	cin>>a>>b>>c>>d;
+	int tot=0;
+	for(int i=max(c+1,a+b);i<=b+c;++i)
+	tot+=(min(d+1,i)-c)*(min(i-b,b)-max(i-c,a)+1);
+	cout<<tot<<endl;
+}

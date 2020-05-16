@@ -1,0 +1,31 @@
+#include<bits/stdc++.h>
+using namespace std;
+int main()
+{
+    int t;
+    cin>>t;
+    while(t--)
+    {
+    long long a;
+    long long k;
+    cin>>a>>k;
+    for(int i=1;i<k;i++)
+    {
+        long long b=a;
+        int mn=15;
+        int mx=-1;
+        while(b)
+        {
+            int k=b%10;
+            mn=min(mn,k);
+            mx=max(mx,k);
+            b=b/10;
+        }
+        a+=mn*mx;
+        if(mn*mx==0)
+        break;
+    }
+    cout<<a<<'\n';
+    }
+    return 0;
+}

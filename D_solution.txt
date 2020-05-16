@@ -1,0 +1,38 @@
+#include<bits/stdc++.h>
+using namespace std;
+int main()
+{
+    int t;
+    t=1;
+    while(t--)
+    {
+        int n,s;
+        cin>>n>>s;
+        if(n==1)
+        {
+            if(s==1)
+            {
+                cout<<"NO"<<'\n';
+                continue;
+            }
+            else
+            {
+                cout<<"YES"<<'\n';
+                cout<<s<<'\n';
+                cout<<1<<'\n';
+                continue;
+            }
+        }
+        if(s<n*2)
+        {
+            cout<<"NO"<<'\n';
+            continue;
+        }
+        cout<<"YES"<<'\n';
+        for(int i=0;i<n-1;i++)
+        cout<<1<<" ";
+        cout<<(s-(n-1))<<'\n';
+        cout<<n<<'\n';
+    }
+    return 0;
+}
